@@ -32,14 +32,31 @@ while capturing:  # Take pictures forever
     )
     if vcap.isOpened():
         print("opened")
-        # Create directory for night images based on location
+
+        # Get current hour (in WIB, GMT +7)
+        current_hour = int(time.strftime('%H'))
+
+        # Create directory based on location
         directory = location[int(i) - 1]
         if not os.path.exists(directory):
             os.makedirs(directory)  # Create directory if it doesn't exist
 
+        # Create subfolder for day and night based on current hour
+        subfolder=""
+        if current_hour >= 18 or current_hour < 6: # Night time 6 PM onwards or before 6AM
+            subfolder="/night"
+        else: # Daytime 6 AM to 5 PM
+            subfolder="/day"
+
+        # Create complete directory path with subfolder 
+        
+        complete_dir = os.path.join(directory, subfolder)
+        if not os.path.exists(complete_dir):
+            os.makedirs(complete_dir)
+
         ret, frame = vcap.read()
         if ret:
-            filename = os.path.join(directory, str(time.time()) + ".jpg")  # Path and image construction
+            filename = os.path.join(complete_dir, str(time.time()) + ".jpg")  # Path and image construction
             cv2.imwrite(filename, frame)  # Take picture
             print("Image: " + filename)
             start = time.time()
