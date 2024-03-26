@@ -69,7 +69,7 @@ Complete structure:
     .
     ├── images
     │   ├──
-    │   {location} 
+    │   {location}              # Image folder
     │   └──
     │   {image files}
     ├── src                     # Source files 
@@ -87,7 +87,7 @@ https://mam.jogjaprov.go.id:1937/{cctv-category}
 ```
 For the CCTV Category, you can change based what shown on the website https://mam.jogjaprov.go.id/cctvs
 
-Prefer using just two endpoint: /atcs/ and /atcs-kota/
+We suggest just using two endpoint: /atcs/ and /atcs-kota/
 
 2. CCTV Jogjakota Endpoint
 ```
