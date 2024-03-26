@@ -24,7 +24,7 @@ i = input("Pilih lokasi: ")
 count_pic = int(input("Jumlah gambar: "))
 
 print("Opening stream....")
-while capturing:  # Take pictures forever
+while capturing: 
     vcap = cv2.VideoCapture(
         "https://mam.jogjaprov.go.id:1937/atcs-kota/"
         + location[int(i) - 1]
@@ -33,24 +33,12 @@ while capturing:  # Take pictures forever
     if vcap.isOpened():
         print("opened")
 
-        # Get current hour (in WIB, GMT +7)
+         # Get current hour (in WIB)
         current_hour = int(time.strftime('%H'))
 
         # Create directory based on location
         directory = location[int(i) - 1]
-        if not os.path.exists(directory):
-            os.makedirs(directory)  # Create directory if it doesn't exist
-
-        # Create subfolder for day and night based on current hour
-        subfolder=""
-        if current_hour >= 18 or current_hour < 6: # Night time 6 PM onwards or before 6AM
-            subfolder="/night"
-        else: # Daytime 6 AM to 5 PM
-            subfolder="/day"
-
-        # Create complete directory path with subfolder 
-        
-        complete_dir = os.path.join(directory, subfolder)
+        complete_dir = 'images/' + directory
         if not os.path.exists(complete_dir):
             os.makedirs(complete_dir)
 
