@@ -52,6 +52,13 @@ location = [
 ]
 ```
 
+Location above is related from where you used the endpoint, so always refers to these sites:
+
+1. https://mam.jogjaprov.go.id
+2. https://cctvjss.jogjakota.go.id
+
+The naming convention of the location can be random, you can try it by using snake case or camel case as shown above.
+
 You can add more specific location by adding it into the list. Some locations are disabled for crawling, but you can try your luck.
 
 ### Pathing
