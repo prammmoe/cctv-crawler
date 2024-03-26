@@ -22,18 +22,17 @@ pip install opencv-python
 python main.py
 ```
 
-or
+or when running from parent directory:
 
 ```
 python src/main.py
 ```
-When running from parent directory
 
 ## Documentations
 
-### Location 
+### Locations 
 
-For the location code below:
+For the locations code below:
 
 ```
 location = [
@@ -52,18 +51,25 @@ location = [
 ]
 ```
 
+Locations above is related from where you used the endpoint, so always refers to these sites:
+
+1. https://mam.jogjaprov.go.id
+2. https://cctvjss.jogjakota.go.id
+
+The naming convention of the location can be random, you can try it by using snake case or camel case as shown above.
+
 You can add more specific location by adding it into the list. Some locations are disabled for crawling, but you can try your luck.
 
 ### Pathing
 
-Image directory will automatically made when the code finish running and collecting image. The directory saving the file is in images folder and the location will be the subfolder.
+Image directory will automatically made when the code finish running and collecting image. The directory saving the file is in images folder and the location selected will be the subfolder.
 
 Complete structure:
 
     .
     ├── images
     │   ├──
-    │   {location} 
+    │   {location}              # Image folder
     │   └──
     │   {image files}
     ├── src                     # Source files 
@@ -81,7 +87,7 @@ https://mam.jogjaprov.go.id:1937/{cctv-category}
 ```
 For the CCTV Category, you can change based what shown on the website https://mam.jogjaprov.go.id/cctvs
 
-Prefer using just two endpoint: /atcs/ and /atcs-kota/
+We suggest just using two endpoint: /atcs/ and /atcs-kota/
 
 2. CCTV Jogjakota Endpoint
 ```
