@@ -20,10 +20,10 @@ location = [
 ]
 for idx, a in enumerate(location):
     print(str(idx + 1) + ". " + a)
-i = input("pilih lokasi : ")
-count_pic = int(input("jumlah gambar : "))
+i = input("Pilih lokasi: ")
+count_pic = int(input("Jumlah gambar: "))
 
-print("opening stream....")
+print("Opening stream....")
 while capturing:  # Take pictures forever
     vcap = cv2.VideoCapture(
         "https://mam.jogjaprov.go.id:1937/atcs-kota/"
@@ -39,10 +39,9 @@ while capturing:  # Take pictures forever
 
         ret, frame = vcap.read()
         if ret:
-            filename = os.path.join(directory, str(time.time()) + ".jpg")  # Use os.path.join for cleaner path construction
-            # filename = location[int(i) - 1] + "/" + str(time.time()) + ".jpg"
+            filename = os.path.join(directory, str(time.time()) + ".jpg")  # Path and image construction
             cv2.imwrite(filename, frame)  # Take picture
-            print("collected dataset : " + filename)
+            print("Image: " + filename)
             start = time.time()
             while not ((time.time() - start) > 10):
                 pass
@@ -51,4 +50,4 @@ while capturing:  # Take pictures forever
                 capturing = False
         vcap.release()
 
-print("Finish Crawl Data")
+print(f"Finish, successfully collected {count_pic} images")
