@@ -51,7 +51,7 @@ while capturing:
             cv2.imwrite(filename, frame)  # Take picture
             print("Image: " + filename)
             start = time.time()
-            while not ((time.time() - start) > 10):
+            while not ((time.time() - start) > 2): # Change capture delay max to 2 seconds
                 pass
             cntr = cntr + 1
             if cntr > count_pic:
