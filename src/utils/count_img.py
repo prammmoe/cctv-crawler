@@ -55,4 +55,4 @@ for filename in os.listdir(directory):
   if is_image_file(filename):
     num_images += 1
 
-print(f"There are {num_images} images in the subfolders of '{simpang_dir}'.")
+print(f"There are {num_images} images in '{simpang_dir}'.")
