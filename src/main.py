@@ -37,7 +37,7 @@ while capturing:
         + ".stream/playlist.m3u8"
     )
     if vcap.isOpened():
-        print("opened")
+        print("Collected")
 
         # Create directory based on location
         directory = location[int(i) - 1]
