@@ -24,7 +24,17 @@ location = [
     "SimpangTerbanBarat",
     "SimpangBalaikotaTimur",
     "SimpangPingit1",
-    "SimpangPingit3"
+    "SimpangPingit3",
+    "Warungboto1",
+    "Simpang_KolSugiono2",
+    "SimpangPasarTeloUtara",
+    "KMNol",
+    "BPK",
+    "ViewSimpangTugu",
+    "ViewBukitKlangon",
+    "ViewAlunAlunKidul",
+    "ViewBaronTimur",
+    "ViewSambisari"
 ]
 for idx, a in enumerate(location):
     print(str(idx + 1) + ". " + a)
