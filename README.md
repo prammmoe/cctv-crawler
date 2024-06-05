@@ -131,7 +131,7 @@ Complete structure:
 
 1. MAM Jogjaprov Endpoint
 
-```
+```link
 https://mam.jogjaprov.go.id:1937/{cctv-category}
 ```
 
@@ -141,7 +141,7 @@ We suggest just using two endpoint: /atcs/ and /atcs-kota/
 
 2. CCTV Jogjakota Endpoint
 
-```
+```link
 https://cctvjss.jogjakota.go.id/atcs/
 ```
 
