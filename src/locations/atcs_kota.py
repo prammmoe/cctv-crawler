@@ -2,7 +2,6 @@ import cv2
 import os
 import time
 
-
 class ATCSKota:
     def __init__(self):
         self.counter = 1
