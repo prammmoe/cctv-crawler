@@ -3,21 +3,27 @@ import os
 import time
 
 
-class BantulCCTV:
+class MaliboroCCTV:
     def __init__(self):
         self.counter = 1
         self.capturing = True
         self.location = [
-            "SimpangKorpriBarat",
-            "TPRParangtritis",
-            "PasarBantul",
-            "MasjidMakamImogiri",
-            "BendungNiten",
-            "PerempatanPaseban",
-            "SimpangKorpriUtara",
-            "TerminalMakamImogiri",
-            "BendungKlegen",
-            "BunderanSrandakan",
+            "UPTMalio5_Perwakilan",
+            "UPTMalio4_DepanDPRD",
+            "UPTMalio11_TerangBulan",
+            "UPTMalio3_DepanDispar",
+            "UPTMalio10_Kepatihan",
+            "UPTMalio24_SimpangReksobayan",
+            "UPTMalio21_UtaraInnaGaruda",
+            "UPTMalio9_MutiaraBaru",
+            "UPTMalio13_GunungMas",
+            "UPTMalio12_Ramayana",
+            "UPTMalio1_SelatanTeteg",
+            "UPTMalio_NolKmUtara",
+            "UPTMalio22_SimpangPajeksan",
+            "UPTMalio_NolKmGedungAgung",
+            "UPTMalio25_UtaraMall",
+            "UPTMalio6_MallUtara"
         ]   
         self.count_pic = 0 
 
@@ -33,7 +39,7 @@ class BantulCCTV:
     def capture_images(self):
         print("Opening stream ...")
         while self.capturing:
-            vcap = cv2.VideoCapture(f"https://mam.jogjaprov.go.id:1937/cctv-bantul/{self.location[self.selected_location]}.stream/playlist.m3u8")
+            vcap = cv2.VideoCapture(f"https://mam.jogjaprov.go.id:1937/cctv-uptmalioboro/{self.location[self.selected_location]}.stream/playlist.m3u8")
 
             if vcap.isOpened():
                 print("Collected")

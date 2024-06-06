@@ -1,22 +1,29 @@
-# main.py
+# Main Class
 
-from locations.atcs_kota import ATCSKota
-from locations.kominfo_sleman import KominfoSlemanCCTV
-from locations.bantul import BantulCCTV
+from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul
 
 def main():
     print("Choose CCTV to run:")
     print("1. ATCS Kota")
     print("2. Kominfo Sleman CCTV")
     print("3. Bantul CCTV")
+    print("4. ATCS")
+    print("3. ATCS Kulon Progo")
+    print("3. ATCS Malioboro")
     choice = input("Enter choice: ")
 
     if choice == '1':
-        cctv = ATCSKota()
+        cctv = atcs_kota.ATCSKota()
     elif choice == '2':
-        cctv = KominfoSlemanCCTV()
+        cctv = kominfo_sleman.KominfoSlemanCCTV()
     elif choice == '3':
-        cctv = BantulCCTV()
+        cctv = bantul.BantulCCTV()
+    elif choice == '4':
+        cctv = atcs.ATCS()
+    elif choice == '5':
+        cctv = atcs_kp.ATCSKulonProgo()
+    elif choice == '6':
+        cctv = malioboro.MaliboroCCTV()
     else:
         print("Invalid choice!")
         return
