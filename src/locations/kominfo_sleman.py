@@ -8,7 +8,40 @@ class KominfoSlemanCCTV:
         self.counter = 1
         self.capturing = True
         self.location = [
-
+            "FlyOver_JomborTimur",
+            "Perempatan_DemakIjo1",
+            "Sidomoyo_Utara",
+            "Munggur1",
+            "Patran_Godean",
+            "Tirtoadi_Selatan",
+            "Banyurejo_Utara",
+            "Terminal_Condongcatur1",
+            "Tirtoadi_Utara",
+            "Banyurejo_Selatan",
+            "Munggur2",
+            "Selomartani_Selatan",
+            "Maguwoharjo2",
+            "Bundaran_UGM1",
+            "Perempatan_Godean",
+            "Pertigaan_PasarGamping",
+            "Maguwoharjo6",
+            "Terminal_Condongcatur2",
+            "Sidomoyo_Selatan",
+            "PosPolisi_Jombor",
+            "Perempatan_UPN1",
+            "Pertigaan_Maguwo2",
+            "Proliman_1",
+            "Maguwoharjo4",
+            "Maguwoharjo3",
+            "Selomartani_Utara",
+            "Maguwoharjo5",
+            "Margokaton_Utara",
+            "Babarsari2",
+            "Margokaton_Selatan",
+            "Perempatan_PasarStan",
+            "Pertigaan_PasarPrambanan",
+            "Babarsari1",
+            "Bantulan_Timur"
         ]   
         self.count_pic = 0 
 
