@@ -1,7 +1,6 @@
 # Main Class
 
-from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul
-from src.locations import semarang
+from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul, semarang
 
 def main():
     print("Choose CCTV to run:")
