@@ -8,8 +8,8 @@ def main():
     print("2. Kominfo Sleman CCTV")
     print("3. Bantul CCTV")
     print("4. ATCS")
-    print("3. ATCS Kulon Progo")
-    print("3. ATCS Malioboro")
+    print("5. ATCS Kulon Progo")
+    print("6. ATCS Malioboro")
     choice = input("Enter choice: ")
 
     if choice == '1':
