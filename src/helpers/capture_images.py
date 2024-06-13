@@ -8,7 +8,7 @@ def capture_images(location, selected_location, count_pic):
     
     print("Opening stream ...")
     while capturing:
-        vcap = cv2.VideoCapture(f"https://mam.jogjaprov.go.id:1937/{location[selected_location]}.stream/playlist.m3u8")
+        vcap = cv2.VideoCapture(f"https://mam.jogjaprov.go.id:1937/cctv-kominfosleman/{location[selected_location]}.stream/playlist.m3u8")
 
         if vcap.isOpened():
             print("Collected")
