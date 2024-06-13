@@ -1,6 +1,6 @@
 # Main Class
 
-from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul, semarang
+from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul, semarang, bandung
 
 def main():
     print("Choose CCTV to run:")
@@ -10,7 +10,8 @@ def main():
     print("4. ATCS")
     print("5. ATCS Kulon Progo")
     print("6. ATCS Malioboro")
-    print("7. Semarang Random")
+    print("7. Semarang")
+    print("8. Bandung")
     choice = input("Enter choice: ")
 
     if choice == '1':
@@ -27,6 +28,8 @@ def main():
         cctv = malioboro.MaliboroCCTV()
     elif choice == '7':
         cctv = semarang.Semarang()
+    elif choice == '8':
+        cctv = bandung.Bandung()
     else:
         print("Invalid choice!")
         return
