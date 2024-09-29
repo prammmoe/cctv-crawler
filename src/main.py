@@ -1,6 +1,8 @@
-# Main Class
-
-from locations import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul, semarang, bandung, cctv_jogjakota, surakarta
+from src.locations.yogyakarta import atcs, atcs_kota, atcs_kp, kominfo_sleman, malioboro, bantul, cctv_jogjakota, malioboro_mam
+from src.locations.bandung import bandung
+from src.locations import malioboro_mam
+from src.locations.semarang import semarang
+from src.locations.surakarta import surakarta
 
 def main():
     print("Choose CCTV to run:")
@@ -14,6 +16,7 @@ def main():
     print("8. Bandung")
     print("9. ATCS Jogja Kota")
     print("10. ATCS Surakarta")
+    print("11. Malioboro Only")
     choice = input("Enter choice: ")
 
     if choice == '1':
@@ -36,6 +39,8 @@ def main():
         cctv = cctv_jogjakota.CCTVJogjaKota()
     elif choice == '10':
         cctv = surakarta.Surakarta()
+    elif choice == '11':
+        cctv = malioboro_mam.Malioboro()
     else:
         print("Invalid choice!")
         return

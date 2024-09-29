@@ -43,8 +43,8 @@ class Semarang:
                 print("Collected")
 
                 # Create dirs
-                directory = self.location[self.selected_location]
-                complete_dir = os.path.join('images', directory)
+                directory = 'images/' + self.location[self.selected_location]
+                complete_dir = os.path.join('datasets', directory)
                 
                 if not os.path.exists(complete_dir):
                     os.makedirs(complete_dir)

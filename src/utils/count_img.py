@@ -1,4 +1,5 @@
 # Scripts used to help you count image from the subfolder of /images
+# Under development
 
 import os
 
@@ -10,23 +11,13 @@ def is_image_file(filename):
       return True
   return False
 
-location = [
-    "Gondomanan",
-    "Wirobrajan",
-    "Gramedia",
-    "Jetis",
-    "SimpangTerbanUtara",
-    "Serangan",
-    "SimpangDemanganUtara",
-    "UKDW",
-    "APMD",
-    "SimpangTerbanTimur",
-    "SimpangDemanganSelatan",
-    "SimpangTerbanBarat",
-    "SimpangBalaikotaTimur"
-]
 
-base_dir = "/media/pram/New Volume/Ikhwan/Lomba/Unity/Data Mining/cctv-crawler/images/"
+data_dir = "/media/pram/New Volume/Ikhwan/Lomba/Unity/Data Mining/cctv-crawler/datasets/"
+
+location = [f for f in os.listdir(data_dir) if os.path.isdir(f)]
+print(location)
+
+base_dir = "/media/pram/New Volume/Ikhwan/Lomba/Unity/Data Mining/cctv-crawler/datasets/"
 
 # Print location options with numbers
 for idx, a in enumerate(location):

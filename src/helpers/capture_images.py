@@ -14,8 +14,8 @@ def capture_images(location, selected_location, count_pic):
             print("Collected")
 
             # Create dirs
-            directory = location[selected_location]
-            complete_dir = os.path.join('images', directory)
+            directory = 'images/' + location[selected_location]
+            complete_dir = os.path.join('datasets', directory)
             
             if not os.path.exists(complete_dir):
                 os.makedirs(complete_dir)
