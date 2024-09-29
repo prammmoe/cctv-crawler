@@ -3,15 +3,31 @@ import os
 import time
 
 
-class CCTVJogjaKota:
+class Surakarta:
     def __init__(self):
         self.counter = 1
         self.capturing = True
         self.location = [
-            "ATCS_jogokaryan",
-            "ATCS_Simpang_Patangpuluhan",
-            "ATCS_mirota",
-            "ATCS_gramedia"
+            "Agas",
+            "Balapan"
+            "Tirtonadi01",
+            "JembatanTirtonadi",
+            "Balapan01",
+            "Banjarsari",
+            "Baron",
+            "BatuRono",
+            "BundaranBaron",
+            "Gladag",
+            "DPRD",
+            "Gading",
+            "FlyoverTimur",
+            "LojiGandrung",
+            "MasjidAgung",
+            "PasarGede",
+            "Purwosari",
+            "Sriwedari01",
+            "Sudirman",
+            "UNS"
         ]
         self.count_pic = 0 
 
@@ -27,14 +43,14 @@ class CCTVJogjaKota:
     def capture_images(self):
         print("Opening stream ...")
         while self.capturing:
-            vcap = cv2.VideoCapture(f"https://cctvjss.jogjakota.go.id/atcs/{self.location[self.selected_location]}.stream/playlist.m3u8")
+            vcap = cv2.VideoCapture(f"https://surakarta.atcsindonesia.info:8086/camera/{self.location[self.selected_location]}.flv")
 
             if vcap.isOpened():
                 print("Collected")
 
                 # Create dirs
-                directory = self.location[self.selected_location]
-                complete_dir = os.path.join('images', directory)
+                directory = 'images/' + self.location[self.selected_location]
+                complete_dir = os.path.join('datasets', directory)
                 
                 if not os.path.exists(complete_dir):
                     os.makedirs(complete_dir)
